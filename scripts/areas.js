@@ -1,10 +1,43 @@
 //import areas function from database.js
-import { getAreas, getServices, getServicesInAreas } from "./database.js"
+import { getAreas, getServices, getServicesInAreas, getGuestsInArea } from "./database.js"
 
 //set return of getAreas equal to a variable
 const areas = getAreas()
 const services = getServices()
 const allAreaServices = getServicesInAreas()
+const areaGuests = getGuestsInArea()
+
+
+document.addEventListener(
+    "click",
+    (clickEvent) => {
+        const itemClicked = clickEvent.target
+        if (itemClicked.id.startsWith("area")) {
+            const [, areaPrimaryKey] = itemClicked.id.split("--")
+            for (const area of areas) {
+                if (area.id === parseInt(areaPrimaryKey)) {
+                    const totalGuests = filterAreaByGuests(area)
+                    if (totalGuests > 1 || totalGuests === 0) {
+                        window.alert(`There are ${totalGuests} guests in this area`)
+                    } else if (totalGuests === 1){
+                        window.alert(`There is 1 guest in this area`)
+                    }
+                }
+            }
+        }
+    }
+)
+
+const filterAreaByGuests = (area) => {
+    let parkGuests = 0
+    for (const inArea of areaGuests) {
+        // for (const guest of currentGuests) {
+        if (inArea.areaId === area.id) {
+            parkGuests++
+        }
+    }
+    return parkGuests
+}
 
 //function to find all services available in a single area
 const filterAreaServices = (area) => {

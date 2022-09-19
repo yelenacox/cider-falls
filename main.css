@@ -1,0 +1,64 @@
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: rgb(38, 37, 37);
+    background: lightgreen;
+    margin: 0;
+}
+
+.main {
+    display: flex;
+    font-size: 18px;
+}
+
+.pageHeader {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+    margin: 15px 10px 0 0;
+}
+
+.park-areas {
+    margin-left: 20px;
+    max-width: 750px;
+    min-width: 750px;
+}
+
+.card {
+    display: flex;
+    flex-flow: row wrap;
+    row-gap: 40px;
+    column-gap: 50px;
+    justify-content: space-evenly;
+    margin: 20px;
+    padding: 20px;
+}
+
+#area--1, #area--2, #area--3, #area--4, #area--5, #area--6 {
+    border-radius: 15px;
+    height: 180px;
+    background: rgb(229, 239, 245);
+    padding: 10px;
+    width: 150px;
+}
+
+.guests {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    padding-right: 100px;
+}
+
+.footer {
+    text-align: center;
+    font-size: 12px;
+    margin-bottom: 20px;
+}
+

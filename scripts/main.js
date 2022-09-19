@@ -3,25 +3,32 @@ import { parkServices } from "./services.js"
 import { guestList } from "./guests.js"
 import { parkAreas } from "./areas.js"
 //define variable of the main html container equal to document.querySelector("NAME OF ID/CLASS WHERE MAIN HTML IS")
- 
+
 const mainContainer = document.querySelector("#container")
 
 //Main HTML for the site, with values interpolated where they will need to be displayed
 const applicationHTML = `
-<h1>Cider Falls Park</h1>
+<section class="main">
 <article class="park-areas">
     <section class="detail--column list details__areas">
-        <h2>Park Areas</h2>
-        ${parkAreas()}
-    </section>
+        <h2 class="park-area-heading">Park Areas</h2>
+        <div class="cards">
+        <div class="card">${parkAreas()}</div></div>
+        </div>
 </article>
 
 <article class="guests">
 <section class="detail--column--orders">
-<h1>Guests</h1>
+<h2 class="guest-heading">Current Guests</h2>
     ${guestList()}
     </section>
 </article>
+</section>
+
+<article class="footer">
+555-555-5555 - CiderFalls@email.com - 123 Main St
+</footer>
+
 `
 
 mainContainer.innerHTML = applicationHTML

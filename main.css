@@ -2,12 +2,11 @@ body {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     color: rgb(38, 37, 37);
     background: lightgreen;
-    margin: 0;
+    font-size: 18px;
 }
 
 .main {
     display: flex;
-    font-size: 18px;
 }
 
 .pageHeader {
@@ -24,13 +23,22 @@ img {
     margin: 15px 10px 0 0;
 }
 
+.park-services {
+    margin-left: 20px;
+}
+
+.service {
+    display: flex;
+    flex-direction: row;
+}
+
 .park-areas {
     margin-left: 20px;
     max-width: 750px;
     min-width: 750px;
 }
 
-.card {
+.cards {
     display: flex;
     flex-flow: row wrap;
     row-gap: 40px;
@@ -47,6 +55,7 @@ img {
     padding: 10px;
     width: 150px;
 }
+
 
 .guests {
     width: 40%;

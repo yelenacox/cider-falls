@@ -17,9 +17,9 @@ document.addEventListener(
             for (const area of areas) {
                 if (area.id === parseInt(areaPrimaryKey)) {
                     const totalGuests = filterAreaByGuests(area)
-                    if (totalGuests > 1 || totalGuests === 0) {
+                    if (totalGuests !== 1) {
                         window.alert(`There are ${totalGuests} guests in this area`)
-                    } else if (totalGuests === 1){
+                    } else {
                         window.alert(`There is 1 guest in this area`)
                     }
                 }

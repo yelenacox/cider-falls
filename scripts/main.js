@@ -8,12 +8,20 @@ const mainContainer = document.querySelector("#container")
 
 //Main HTML for the site, with values interpolated where they will need to be displayed
 const applicationHTML = `
+<article class="park-services">
+    <section class="detail--column list details__services">
+        <h2 class="services">Park Services</h2>
+        <div class="service">${parkServices()}</div>
+    </section>
+    </article>
+    
 <section class="main">
 <article class="park-areas">
     <section class="detail--column list details__areas">
         <h2 class="park-area-heading">Park Areas</h2>
-        <div class="cards">
-        <div class="card">${parkAreas()}</div></div>
+            <div class="cards">
+                ${parkAreas()}
+            </div>
         </div>
 </article>
 

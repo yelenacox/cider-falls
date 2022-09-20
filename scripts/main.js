@@ -10,8 +10,7 @@ const mainContainer = document.querySelector("#container")
 const applicationHTML = `
 <article class="park-services">
     <section class="detail--column list details__services">
-        <h2 class="services">Park Services</h2>
-        <div class="service">${parkServices()}</div>
+        <div class="service"><b>Park services:</b> &nbsp ${parkServices()}</div>
     </section>
     </article>
     
@@ -22,7 +21,7 @@ const applicationHTML = `
             <div class="cards">
                 ${parkAreas()}
             </div>
-        </div>
+        </section>
 </article>
 
 <article class="guests">
